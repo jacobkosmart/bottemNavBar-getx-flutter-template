@@ -7,15 +7,9 @@ import 'package:getx_bottom_nav_sample/pages/home/home_page.dart';
 import 'package:getx_bottom_nav_sample/pages/messages/messages_page.dart';
 import 'package:getx_bottom_nav_sample/pages/users/users_page.dart';
 
-class MyDashBoard extends StatefulWidget {
-  @override
-  _MyDashBoardState createState() => _MyDashBoardState();
-}
+class MyDashBoard extends StatelessWidget {
+  const MyDashBoard({Key? key}) : super(key: key);
 
-class _MyDashBoardState extends State<MyDashBoard> {
-  int _currentIndex = 0;
-
-  final _inactiveColor = Colors.grey;
   @override
   Widget build(BuildContext context) {
     return GetBuilder<DashboardController>(
@@ -45,14 +39,14 @@ class _MyDashBoardState extends State<MyDashBoard> {
                 icon: Icon(Icons.apps),
                 title: Text('Home'),
                 activeColor: Colors.green,
-                inactiveColor: _inactiveColor,
+                inactiveColor: controller.inActiveColor,
                 textAlign: TextAlign.center,
               ),
               BottomNavyBarItem(
                 icon: Icon(Icons.people),
                 title: Text('Users'),
                 activeColor: Colors.purpleAccent,
-                inactiveColor: _inactiveColor,
+                inactiveColor: controller.inActiveColor,
                 textAlign: TextAlign.center,
               ),
               BottomNavyBarItem(
@@ -61,14 +55,14 @@ class _MyDashBoardState extends State<MyDashBoard> {
                   'Messages ',
                 ),
                 activeColor: Colors.pink,
-                inactiveColor: _inactiveColor,
+                inactiveColor: controller.inActiveColor,
                 textAlign: TextAlign.center,
               ),
               BottomNavyBarItem(
                 icon: Icon(Icons.settings),
                 title: Text('Settings'),
                 activeColor: Colors.blue,
-                inactiveColor: _inactiveColor,
+                inactiveColor: controller.inActiveColor,
                 textAlign: TextAlign.center,
               ),
             ],
