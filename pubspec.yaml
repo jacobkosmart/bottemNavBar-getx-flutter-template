@@ -39,6 +39,7 @@ dependencies:
   freezed_annotation:
   json_annotation: ^4.3.0
   intl:
+  shared_preferences: ^2.0.9
 
 dev_dependencies:
   flutter_test:

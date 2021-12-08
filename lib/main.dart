@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: "/",
+      initialBinding: DashboardBinding(),
       getPages: [
         GetPage(
           name: "/",
           page: () => MyDashBoard(),
-          binding: DashboardBinding(),
         ),
       ],
     );
